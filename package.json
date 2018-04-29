@@ -1,0 +1,19 @@
+{
+  "name": "group-4_oracle",
+  "version": "1.0.0",
+  "description": "a project using oracle database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anlactruong/Group-4_Oracle.git"
+  },
+  "author": "Group4",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anlactruong/Group-4_Oracle/issues"
+  },
+  "homepage": "https://github.com/anlactruong/Group-4_Oracle#readme"
+}
