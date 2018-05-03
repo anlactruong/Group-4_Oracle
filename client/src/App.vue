@@ -1,7 +1,14 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <b-navbar class="navbar-custom" :sticky="true">
+      <div style="margin-left: 30px;">
+      <router-link style="text-decoration: none" :to="'/'">
+        <b-img src="/static/logo.png" alt="logo" fluid style="width: auto; height: 50px;"/>
+      </router-link>
+      </div>
+    </b-navbar>
+    <br />
+    <router-view></router-view>
   </div>
 </template>
 
@@ -12,12 +19,8 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.navbar-custom {
+    background-color: #ffffff;
+    border-bottom:3px solid #2c1eac;
 }
 </style>
