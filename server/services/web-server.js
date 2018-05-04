@@ -4,6 +4,7 @@ const webServerConfig = require('../config/web-server.js');
 const database = require('./database.js');
 const morgan = require('morgan');
 const router = require('./router.js');
+const cors = require('cors')
 
 let httpServer;
  
@@ -12,6 +13,7 @@ function initialize() {
     const app = express();
     httpServer = http.createServer(app);
     app.use(morgan('combined'));
+    app.use(cors())
     // Mount the router at /api so all its routes start with /api
     app.use('/api', router);
     app.get('/', async (req, res) => {
