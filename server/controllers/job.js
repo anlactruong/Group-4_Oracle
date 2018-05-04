@@ -3,7 +3,7 @@ const job = require('../db_apis/job.js');
 async function get(req, res, next) {
   try {
     const context = {};
-    context.url = parseInt(req.params.url, 10);
+    context.url = req.params.url;
     const rows = await job.find(context);
     if (req.params.url) {
       if (rows.length === 1) {

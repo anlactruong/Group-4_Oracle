@@ -4,8 +4,9 @@ const baseQuery =
 `select id "id",
 groupId "groupId",
 title "title",
-description "description",
 url "url",
+description "description",
+requirement "requirement",
 benefit "benefit",
 howToApply "howToApply",
 imgLink "imgLink",
@@ -23,6 +24,7 @@ async function find(context) {
 		query += `\nwhere url = :url`;
 	}
 	const result = await database.simpleExecute(query, binds);
+	return result.rows;
 }
 
 module.exports.find = find;

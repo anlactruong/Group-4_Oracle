@@ -1,13 +1,49 @@
 create table jobs (
-	id INT,
+	id int NOT NULL,
 	groupId INT,
 	title varchar(255),
-	description varchar(2000),
 	url varchar(255),
+	description varchar(2000),
+	requirement varchar(2000),
 	benefit varchar(2000),
 	howToApply varchar(2000),
 	imgLink varchar(1000),
 	status INT,
 	createdAdmin INT,
-	createdAt DATETIME()
+	createdAt varchar(200),
+	PRIMARY KEY (id)
+);
+
+INSERT INTO jobs (id, groupId, title, url, description, requirement, benefit, howToApply, imgLink, status, createdAdmin, createdAt)
+VALUES 
+(
+	1,
+	1,
+	'Tester - công ty x',
+	'tester-cong-ty-x-1',
+	'Test các dự án website, app, phối hợp với các bộ phận khác để đảm bảo chất lượng dự án, trải nghiệm người dùng và hiệu suất và các vấn đề ảnh hưởng đến hiệu quả chức năng của website',
+	'Tốt nghiệp đại học các trường về Công nghệ thông tin',
+	'Nhiều cơ hội thăng tiến và học hỏi, được đào tạo để nâng cao năng lực chuyên môn. Lương cạnh tranh',
+	'Email your cv to: career@xcompany.com',
+	'http://bitly.com/hiringImage',
+	1,
+	1,
+	'04-05-2018'
+);
+
+INSERT INTO jobs (id, groupId, title, url, description, requirement, benefit, howToApply, imgLink, status, createdAdmin, createdAt)
+VALUES
+(
+	2,
+	1,
+	'Backend developer - công ty x',
+	'backend-developer-cong-ty-x-2',
+	'Xây dựng, triển khai, nâng cấp và bảo trì hệ thống app.',
+	'Có kinh nghiệm back end 2 năm trở lên. Tốt nghiệp đại học các trường về Công nghệ thông tin',
+	'Nhiều cơ hội thăng tiến và học hỏi, được đào tạo để nâng cao năng lực chuyên môn. Lương cạnh tranh',
+	'Email your cv to: career@xcompany.com',
+	'http://bitly.com/hiringImage',
+	1,
+	1,
+	'04-05-2018'
 );
