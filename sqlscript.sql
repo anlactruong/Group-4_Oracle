@@ -1,6 +1,6 @@
 create table jobs (
 	id int NOT NULL,
-	groupId INT,
+	groupId INT ,
 	title varchar(255),
 	url varchar(255),
 	description varchar(2000),
@@ -99,3 +99,7 @@ CREATE TABLE users
 
 INSERT INTO users (id, loginName, loginPassword, isAdmin)
 VALUES (1, 'admin', 'admin', 1);
+
+ALTER TABLE jobs ADD CONSTRAINT FK_ID FOREIGN KEY(groupId) REFERENCES jobGroups(id);
+ALTER TABLE jobGroups ADD CONSTRAINT FK_userID1 FOREIGN KEY(createdAdmin) REFERENCES users(id);
+ALTER TABLE jobs ADD CONSTRAINT FK_userID2 FOREIGN KEY(createdAdmin) REFERENCES users(id);
