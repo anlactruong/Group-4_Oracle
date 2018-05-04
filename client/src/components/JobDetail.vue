@@ -50,6 +50,7 @@ export default {
   },
   async mounted () {
     this.jobDetailObj = (await JobService.getJobDetail(this.jobUrl)).data
+    this.linebreak()
   }
 }
 </script>

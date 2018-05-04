@@ -2,7 +2,8 @@
   <div>
     <b-container>
       <b-img src='/static/jobimg.png' alt="logo" fluid />
-      <p><b-badge class="vitridt">Vị trí đang tuyển</b-badge></p>
+      <br /><br />
+      <center><b-badge class="vitridt">Những công việc đang chờ bạn:</b-badge></center>
     </b-container>
   </div>
 </template>
@@ -12,8 +13,8 @@
 
 <style scoped>
 .vitridt {
-    background-color: #ffffff; color: #1b3eb1;
-    font-size: 20px;
+    background-color: #9de9dc; color: #0a1b52;
+    font-size: 25px;
     font-weight: 500;
 }
 </style>

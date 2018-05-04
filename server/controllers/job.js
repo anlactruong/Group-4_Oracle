@@ -18,5 +18,15 @@ async function get(req, res, next) {
     next(err);
   }
 }
+
+async function getList(req, res, next) {
+  try {
+    let lst = await job.findList();
+    res.status(200).json(lst)
+  } catch (err) {
+    next(err);
+  }
+}
  
 module.exports.get = get;
+module.exports.getList = getList;

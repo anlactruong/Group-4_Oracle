@@ -32,6 +32,30 @@ VALUES
 );
 
 INSERT INTO jobs (id, groupId, title, url, description, requirement, benefit, howToApply, imgLink, status, createdAdmin, createdAt)
+VALUES 
+(
+	3,
+	2,
+	'Nhân Viên Bán Vé Máy Bay (Booker- Ticketing)',
+	'nhan-vien-ban-ve-may-bay-3',
+	'CÔNG TY TNHH THƯƠNG MẠI DỊCH VỤ DU LỊCH BẢO GIA TRẦN
+	Đặt và xuất vé máy bay nội địa và quốc tế.
+	Hỗ trợ đại lý ,
+	Hỗ trợ các phòng ban khác trong công ty trong việc phát triển',
+	'Có kinh nghiệm làm việc trong lãnh vực ứng tuyển tối thiểu 1 năm
+	Khả năng giao tiếp tốt
+	Sử dụng phần mềm abacus, sabre thành thạo .',
+	'Lương cơ bản +hoa hồng cao
+	Được hưởng các phúc lợi theo quy định của nhà nước.
+	Môi trường làm việc chuyên nghiệp',
+	'Email your cv to: tuyendung@abcxyz.com or Call: 099xxxyyyy',
+	'http://bitly.com/hiringImage',
+	1,
+	1,
+	'04-05-2018'
+);
+
+INSERT INTO jobs (id, groupId, title, url, description, requirement, benefit, howToApply, imgLink, status, createdAdmin, createdAt)
 VALUES
 (
 	2,
@@ -47,3 +71,19 @@ VALUES
 	1,
 	'04-05-2018'
 );
+
+create table jobGroups (
+	id int NOT NULL,
+	title varchar(255),
+	imgLink varchar(1000),
+	status INT,
+	createdAdmin INT,
+	createdAt varchar(200),
+	PRIMARY KEY (id)
+);
+
+INSERT INTO jobGroups (id, title, imgLink, status, createdAdmin, createdAt)
+VALUES (1, 'Công nghệ thông tin', 'http://bitly.com/hiringImage', 1, 1, '04-05-2018');
+
+INSERT INTO jobGroups (id, title, imgLink, status, createdAdmin, createdAt)
+VALUES (2, 'Bán hàng', 'http://bitly.com/hiringImage', 1, 1, '04-05-2018');
