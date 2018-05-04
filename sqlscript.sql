@@ -87,3 +87,15 @@ VALUES (1, 'Công nghệ thông tin', 'http://bitly.com/hiringImage', 1, 1, '04-
 
 INSERT INTO jobGroups (id, title, imgLink, status, createdAdmin, createdAt)
 VALUES (2, 'Bán hàng', 'http://bitly.com/hiringImage', 1, 1, '04-05-2018');
+
+CREATE TABLE users
+( id int NOT NULL,
+  loginName varchar(100) NOT NULL,
+  loginPassword varchar(1000) NOT NULL,
+  isAdmin int NOT NULL,
+  CONSTRAINT users_unique UNIQUE (loginName),
+  PRIMARY KEY (id)
+);
+
+INSERT INTO users (id, loginName, loginPassword, isAdmin)
+VALUES (1, 'admin', 'admin', 1);
