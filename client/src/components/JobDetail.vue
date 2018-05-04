@@ -41,6 +41,10 @@ export default {
     }
   },
   methods: {
+    async getJobDetail () {
+      this.jobDetailObj = (await JobService.getJobDetail(this.jobUrl)).data
+      this.linebreak()
+    },
     linebreak () {
       this.jobDetailObj.description = this.jobDetailObj.description.replace(/\r?\n/g, `<br />`)
       this.jobDetailObj.requirement = this.jobDetailObj.requirement.replace(/\r?\n/g, `<br />`)
@@ -48,9 +52,8 @@ export default {
       this.jobDetailObj.howToApply = this.jobDetailObj.howToApply.replace(/\r?\n/g, `<br />`)
     }
   },
-  async mounted () {
-    this.jobDetailObj = (await JobService.getJobDetail(this.jobUrl)).data
-    this.linebreak()
+  mounted () {
+    this.getJobDetail()
   }
 }
 </script>

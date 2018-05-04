@@ -21,7 +21,7 @@ async function find(context) {
 	const binds = {}
 	if (context.url) {
 		binds.url = context.url;
-		query += `\nwhere url = :url`;
+		query += `\n and url = :url`;
 	}
 	const result = await database.simpleExecute(query, binds);
 	return result.rows;
